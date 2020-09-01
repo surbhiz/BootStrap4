@@ -21,10 +21,42 @@
   </head>
 
   <body>
+    <!--navigation bar; bg-primary:for assigning the background color; fixed-top: for fixing the navigation bar at the top-->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+      <div class="container">
+        <!--adding button to help us navigate on small screen -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <!--navbar-toggler-icon: shows the icon(three lines) on the page-->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--navbar-brand: it allows to display information of brand-->
+        <a class="navbar-brand mr-auto" href="./index.html">Ristorante Con Fusion</a>
+        <!--collapse navabr-collapse: it is used for small screen toggle property-->
+        <div class="collapse navbar-collapse" id="Navbar">
+          <!--navbar-nav: helps to align the links horizontally; mr-auto: utility class which allows for right margin -->
+          <ul class="navbar-nav mr-auto">
+            <!--nav-item: it helps to align links horizontally; active: used to show on which page we are actively on -->
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <header class="jumbotron" style="background: #6b5f95">
       <div class="container">
         <div class="row row-header">
-          <div class="col-12 col-sm-8">
+          <div class="col-12 col-sm-6">
             <h1>Ristorante con Fusion</h1>
             <p>
               We take inspiration from the World's best cuisines, and create a
@@ -32,13 +64,20 @@
               your culinary senses!
             </p>
           </div>
-          <div class="col-sm-4"></div>
+          <div class="col-12 col-sm"></div>
         </div>
       </div>
     </header>
 
     <div class="container">
       <div class="row">
+        <!--adding breadcrumb-->
+        <ol class="col-12 breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a>
+
+          </li>
+          <li class="breadcrumb-item active">About us</li>
+        </ol>
         <div class="col-12">
           <h3>About Us</h3>
           <hr />
@@ -121,7 +160,7 @@
           <div class="col-5 offset-1 col-sm-2">
             <h5>Links</h5>
             <ul class="list-unstyled">
-              <li><a href="#">Home</a></li>
+              <li><a href="./index.html">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Menu</a></li>
               <li><a href="#">Contact</a></li>
@@ -158,8 +197,8 @@
     </footer>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
