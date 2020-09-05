@@ -110,9 +110,87 @@
         </div>
         <div class="col-12 col-sm align-self-center mt-1">
           <!--adding tooltip on the button-->
-          <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"
-            title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom"
-            href="#reservations">Reserve Table</a>
+          <a role="button" class="btn btn-block nav-link btn-warning"
+            data-toggle="modal" data-target="#reservations">Reserve Table</a>
+        </div>
+        <div id="reservations" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <!--reservation form-->
+                <h4 class="modal-title" style="color: black;">Reserve a table</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <div class="form-group row" style="color: black;">
+                    <label for="guest" class="col-md-2 col-form-label">Number of Guest</label>
+                    <div class="col-md-10 mt-2">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="guest1" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="guest1">1</label>
+    
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="guest2" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="guest2">2</label>
+    
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="guest3" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="guest3">3</label>
+    
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="guest4" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="guest4">4</label>
+    
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="guest5" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="guest5">5</label>
+    
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="guest6" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="guest6">6</label>
+    
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row" style="color: black;">
+                  <label for="Smokingtype" class="col-12 col-md-2 col-form-label">Section</label>
+                  <div class="col-5 btn-group" role="group">
+                    <button type="button" class="btn btn-success active" autocomplete="off" checked>Non-Smoking</button>
+                    <button type="button" class="btn btn-danger" autocomplete="off">Smoking</button>
+                  </div>
+                  </div>
+                  <div class="form-group row" style="color: black;">
+                    <label for="Datetime" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                    <div class="col-5 col-md-3">
+                      <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
+                    </div>
+                    <div class="col-5 col-md-3">
+                      <input type="time" class="form-control" id="time" name="time" placeholder="Time" />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <!--here we shift the button by 2 column to right as it doesnot have label-->
+                    <div class="offset-md-2 col-md-10">
+                      <button type="submit" class="btn btn-secondary"  data-dismiss="modal">
+                        Cancel
+                      </button>
+                      <button type="submit" class="btn btn-primary">
+                        Reserve
+                      </button>
+                    </div>
+                  </div>
+              </div>
+              </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -242,72 +320,7 @@
         </div>
       </div>
     </div>
-    <div class="row row-content align-items-center" id="reservations">
-      <div class="col-12 col-sm col-md-10">
-        <!--adding card inside the website-->
-        <div class="card">
-          <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-          <div class="card-body">
-            <!--dl: description list allows to apply rows and columns-->
-            <form action="">
-              <div class="form-group row">
-                <label for="guest" class="col-md-2 col-form-label">Number of Guest</label>
-                <div class="col-md-10 mt-2">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="guest1" name="groupOfDefaultRadios">
-                    <label class="custom-control-label" for="guest1">1</label>
-
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="guest2" name="groupOfDefaultRadios">
-                    <label class="custom-control-label" for="guest2">2</label>
-
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="guest3" name="groupOfDefaultRadios">
-                    <label class="custom-control-label" for="guest3">3</label>
-
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="guest4" name="groupOfDefaultRadios">
-                    <label class="custom-control-label" for="guest4">4</label>
-
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="guest5" name="groupOfDefaultRadios">
-                    <label class="custom-control-label" for="guest5">5</label>
-
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="guest6" name="groupOfDefaultRadios">
-                    <label class="custom-control-label" for="guest6">6</label>
-
-                  </div>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label for="Datetime" class="col-12 col-md-2 col-form-label">Date and Time</label>
-                <div class="col-5 col-md-3">
-                  <input type="date" class="form-control" id="date" name="date" placeholder="Date" />
-                </div>
-                <div class="col-5 col-md-3">
-                  <input type="time" class="form-control" id="time" name="time" placeholder="Time" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <!--here we shift the button by 2 column to right as it doesnot have label-->
-                <div class="offset-md-2 col-md-10">
-                  <button type="submit" class="btn btn-primary">
-                    Reserve
-                  </button>
-                </div>
-              </div>
-          </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+   
   </div>
 
   <footer class="footer">
