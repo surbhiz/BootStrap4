@@ -252,6 +252,14 @@
       <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
           <span class="carousel-control-next-icon"></span>
       </a>
+      <div class="btn-group" id="carouselbuttons">
+        <button class="btn btn-sm" id="carousel-pause" style="background-color: #6b5f95;">
+          <span class="fa fa-pause"></span>
+        </button>
+        <button class="btn btn-sm" id="carousel-play" style="background-color: #6b5f95;">
+          <span class="fa fa-play"></span>
+        </button>
+      </div>
           </div>
         </div>
       </div>
@@ -380,10 +388,16 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!--script for adding the tooltip on the button -->
+  <!--script for carousel on the button -->
   <script>
     $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
+      $('#mycarousel').carousel({interval:2000});
+      $('#carousel-pause').click(function(){
+        $('#mycarousel').carousel('pause');
+      });
+      $('#carousel-play').click(function(){
+        $('#mycarousel').carousel('cycle');
+      });
     });
   </script>
 </body>
